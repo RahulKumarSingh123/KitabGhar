@@ -14,8 +14,8 @@ const options = {
     }
 };
 
-async function getBooks(){
 
+export default function OtherBooks() {
     try {
         const response = await fetch(url, options);
         Books = await response.json();
@@ -23,10 +23,6 @@ async function getBooks(){
     } catch (error) {
         console.error(error);
     }
-}
-
-export default function OtherBooks() {
-    getBooks();
     console.log(Books);
 
     return (

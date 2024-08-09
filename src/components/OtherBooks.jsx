@@ -4,6 +4,7 @@ import BooksCard from "./BooksCard.jsx";
 
 let Books = [];
 
+
 const url = 'https://all-books-api.p.rapidapi.com/getBooks';
 const options = {
     method: 'GET',
@@ -13,13 +14,17 @@ const options = {
     }
 };
 
-try {
-    const response = await fetch(url, options);
-    Books = await response.json();
-    console.log(Books);
-} catch (error) {
-    console.error(error);
+function getBooks(){
+
+    try {
+        const response = await fetch(url, options);
+        Books = await response.json();
+        console.log(Books);
+    } catch (error) {
+        console.error(error);
+    }
 }
+getBooks();
 
 export default function OtherBooks() {
     console.log(Books);

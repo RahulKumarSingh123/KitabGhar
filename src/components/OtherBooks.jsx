@@ -24,9 +24,9 @@ async function getBooks(){
         console.error(error);
     }
 }
-getBooks();
 
 export default function OtherBooks() {
+    getBooks();
     console.log(Books);
 
     return (

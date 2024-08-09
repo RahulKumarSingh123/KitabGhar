@@ -14,7 +14,7 @@ const options = {
     }
 };
 
-function getBooks(){
+async function getBooks(){
 
     try {
         const response = await fetch(url, options);
